@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 50px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0,0,0,0.1);
+
+}
+
+/*Styling the left side*/
+
+.container 
+.left_side{
+    position: relative;
+    background: #043442;
+    padding: 40px;
+}
+
+.profileText {
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.profileText
+.mypic {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;   
+    overflow: hidden;
+
+}
+
+.profileText .mypic img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.profileText h2 {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.4em;
+    font-weight: 600;
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+.contact{
+    color: white;
+    text-transform:initial;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.contact ul {
+    position: relative;
+}
+
+.contact ul li {
+    list-style: none;
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.contact ul li .icon {
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #E5E7E7;
+
+}
+
+.contact ul li span {
+    color: white;
+    font-weight: 300;
+}
+
+.contact.education li {
+    margin-bottom: 15px;
+}
+
+.contact.education h5 {
+    color:#E5E7E7;
+    font-weight: 500;
+}
+
+.contact.education h4:nth-child(2){
+    color: white;
+    font-weight: 500;
+}
+
+.contact.education h4{
+    color: white;
+    font-weight: 200;
+}
+
+.contact.language .percent{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background:black;
+    display: block;
+    margin-top: 5px;
+
+}
+
+.contact.language .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #E5E7E7 ;
+    
+
+}
+
+/*Styling the right side*/
+
+.container 
+.right_side{
+    position: relative;
+    background: white;
+    padding: 40px;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.title2 {
+    color: #043442;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #333;
+
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
+.about .box .date{
+    min-width: 150px;
+}
+
+.about .box .date h5{
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #043442;
+}
+
+.about .box .text h4{
+    text-transform: uppercase;
+    color: #043442;
+    font-size: 16px;
+}
+
+.skills .box{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills .box h4{
+    text-transform: uppercase;
+    color: #043442;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.skills .box .percent{
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background:#D2D3D5;
+}
+
+.skills .box .percent div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background:#043442 ;
+}
+
+.socials ul{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.socials ul li{
+    list-style: none;
+    color: #043442;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.socials ul li .fas{
+    color: #E5E7E7 ;
+    font-size: 18px;
+    width: 20px;
+}
+
+.footer{
+    position: fixed;
+    padding: 10px 10px 0px 10px;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: white;
+
+}
+
+@media (max-width: 1000px) {
+    .container{
+        margin: 10px;
+        grid-template-columns: repeat(1,1fr); 
+    }
+    .socials ul{ 
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 600px){
+    .about .box {
+        flex-direction: column;
+    }
+
+    .about .box .date {
+        margin-bottom: 5px;
+    }
+
+    .socials ul{ 
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .skills .box {
+        grid-template-columns: repeat(1,1fr);
+    }
+   
+}
